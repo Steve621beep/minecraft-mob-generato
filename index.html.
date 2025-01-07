@@ -5,14 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft Mob Generator</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
-        #preview { width: 300px; height: 300px; border: 1px solid #ddd; margin-top: 20px; }
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            margin: 20px; 
+        }
+        #preview { 
+            width: 300px; 
+            height: 300px; 
+            border: 1px solid #ddd; 
+            margin: 20px auto; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+        }
     </style>
 </head>
 <body>
     <h1>Minecraft Mob Generator</h1>
     <p>Upload an image to generate a Minecraft mob!</p>
-    <input type="file" accept="image/*">
+    
+    <form>
+        <input type="file" accept="image/*">
+    </form>
+    
     <div id="preview">Upload an image to start</div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
