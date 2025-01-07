@@ -1,0 +1,11 @@
+document.querySelector('input[type="file"]').addEventListener('change', function(event) {
+    const preview = document.getElementById('preview');
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            preview.innerHTML = `<img src="${e.target.result}" width="300" alt="Uploaded Image">`;
+        };
+        reader.readAsDataURL(file);
+    }
+});
